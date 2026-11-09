@@ -1,21 +1,21 @@
 'use client';
 
-import { Home, CheckSquare, Users, Settings, Plus } from 'lucide-react';
+import { Home, CheckSquare, Users, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function Sidebar() {
   return (
-    <div className="w-64 h-screen bg-slate-50 border-r border-slate-200 flex flex-col">
-      <div className="p-4 border-b border-slate-200">
-        <h1 className="text-xl font-bold text-slate-900">AutoSprint</h1>
+    <div className="w-64 h-screen bg-sidebar text-sidebar-foreground border-r border-sidebar-border flex flex-col">
+      <div className="p-4 border-b border-sidebar-border">
+        <h1 className="text-xl font-bold">AutoSprint</h1>
       </div>
-      
+
       <nav className="flex-1 p-4 space-y-2">
         <Button variant="ghost" className="w-full justify-start">
           <Home className="mr-2 h-4 w-4" />
           Dashboard
         </Button>
-        <Button variant="ghost" className="w-full justify-start bg-slate-200">
+        <Button variant="ghost" className="w-full justify-start bg-sidebar-accent text-sidebar-accent-foreground">
           <CheckSquare className="mr-2 h-4 w-4" />
           Tasks
         </Button>
@@ -23,14 +23,11 @@ export function Sidebar() {
           <Users className="mr-2 h-4 w-4" />
           Team
         </Button>
-      </nav>
-
-      <div className="p-4 border-t border-slate-200">
         <Button variant="ghost" className="w-full justify-start">
           <Settings className="mr-2 h-4 w-4" />
           Settings
         </Button>
-      </div>
+      </nav>
     </div>
   );
 }

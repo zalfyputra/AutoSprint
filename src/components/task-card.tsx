@@ -15,9 +15,9 @@ interface TaskCardProps {
 
 export function TaskCard({ title, priority, assignee, comments, dueDate }: TaskCardProps) {
   const priorityColors = {
-    low: 'bg-green-100 text-green-800',
-    medium: 'bg-yellow-100 text-yellow-800',
-    high: 'bg-red-100 text-red-800',
+    low: 'bg-green-500/15 text-green-400',
+    medium: 'bg-yellow-500/15 text-yellow-400',
+    high: 'bg-red-500/15 text-red-400',
   };
 
   return (
@@ -31,7 +31,7 @@ export function TaskCard({ title, priority, assignee, comments, dueDate }: TaskC
           </Badge>
         </div>
 
-        <div className="flex items-center justify-between text-xs text-slate-500">
+        <div className="flex items-center justify-between text-xs text-muted-foreground">
           <div className="flex items-center gap-2">
             {assignee && (
               <Avatar className="h-6 w-6">

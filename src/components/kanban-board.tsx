@@ -84,15 +84,15 @@ const mockColumns: Column[] = [
 
 export function KanbanBoard() {
   return (
-    <div className="flex-1 p-6 overflow-x-auto">
+    <div className="flex-1 p-6 overflow-x-auto bg-background">
       <div className="flex gap-6 h-full">
         {mockColumns.map((column) => (
           <div key={column.id} className="flex-shrink-0 w-80">
-            <div className="bg-slate-100 rounded-lg p-4 h-full flex flex-col">
+            <div className="bg-muted/50 rounded-lg p-4 h-full flex flex-col">
               <div className="flex items-center justify-between mb-4">
-                <h2 className="font-semibold text-slate-700 flex items-center gap-2">
+                <h2 className="font-semibold text-foreground flex items-center gap-2">
                   {column.title}
-                  <span className="text-xs bg-slate-200 px-2 py-1 rounded-full">
+                  <span className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">
                     {column.tasks.length}
                   </span>
                 </h2>
